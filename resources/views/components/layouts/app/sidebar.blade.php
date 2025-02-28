@@ -14,8 +14,8 @@
             <flux:navlist variant="outline">
 
                 {{-- <flux:navlist.item icon="home-plate" :href="route('home')" :current="request()->routeIs('home')" wire:navigate>{{ __('Home Plate') }}</flux:navlist.item> --}}
-                <flux:navlist.item icon="rocket-launch" :href="route('scores')" :current="request()->routeIs('scores')" wire:navigate>{{ __('Scores') }}</flux:navlist.item>
-                <flux:navlist.item icon="chart-bar" :href="route('rankings')" :current="request()->routeIs('rankings')" wire:navigate>{{ __('Rankings') }}</flux:navlist.item>
+                <flux:navlist.item icon="table-properties" :href="route('scores')" :current="request()->routeIs('scores')" wire:navigate>{{ __('Scores') }}</flux:navlist.item>
+                <flux:navlist.item icon="hashtag" :href="route('rankings')" :current="request()->routeIs('rankings')" wire:navigate>{{ __('Rankings') }}</flux:navlist.item>
                 <flux:navlist.item icon="flag" :href="route('teams')" :current="request()->routeIs('teams')" wire:navigate>{{ __('Teams') }}</flux:navlist.item>
                 <flux:navlist.item icon="rectangle-group" :href="route('conferences')" :current="request()->routeIs('conferences')" wire:navigate>{{ __('Conferences') }}</flux:navlist.item>
 
