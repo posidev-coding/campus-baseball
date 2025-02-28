@@ -1,12 +1,11 @@
 <?php
 
+use App\Livewire\Conferences;
 use App\Livewire\Rankings;
 use App\Livewire\Scores;
-use App\Livewire\Conferences;
 use App\Livewire\Teams;
 use Illuminate\Support\Facades\Route;
 use Livewire\Volt\Volt;
-
 
 Route::view('/', 'home')->name('home');
 Route::get('/scores', Scores::class)->name('scores');
@@ -22,4 +21,4 @@ Route::middleware(['auth'])->group(function () {
     Volt::route('settings/appearance', 'settings.appearance')->name('settings.appearance');
 });
 
-require __DIR__ . '/auth.php';
+require __DIR__.'/auth.php';
