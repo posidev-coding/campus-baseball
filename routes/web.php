@@ -7,15 +7,8 @@ use App\Livewire\Teams;
 use Illuminate\Support\Facades\Route;
 use Livewire\Volt\Volt;
 
-// Route::get('/', function () {
-//     return view('welcome');
-// })->name('home');
 
-// Route::view('dashboard', 'dashboard')
-//     ->middleware(['auth', 'verified'])
-//     ->name('dashboard');
-
-Route::view('/', 'dashboard')->name('home');
+Route::view('/', 'home')->name('home');
 Route::get('/scores', Scores::class)->name('scores');
 Route::get('/teams', Teams::class)->name('teams');
 Route::get('/rankings', Rankings::class)->name('rankings');
