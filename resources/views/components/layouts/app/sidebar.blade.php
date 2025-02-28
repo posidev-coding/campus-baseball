@@ -58,6 +58,21 @@
 
             </flux:navlist>
 
+            @auth    
+                <flux:spacer />
+
+                <flux:navlist variant="outline">
+                    <flux:navlist.item icon="cog-6-tooth" href="{{ route('settings.profile') }}">Settings</flux:navlist.item>
+                    <form method="POST" action="{{ route('logout') }}" class="w-full">
+                        @csrf
+                        <flux:navlist.item as="button" type="submit" icon="arrow-right-start-on-rectangle" class="w-full cursor-pointer">
+                            {{ __('Log Out') }}
+                        </flux:navlist.item>
+                    </form>
+                    {{-- <flux:navlist.item icon="information-circle" href="#">Help</flux:navlist.item> --}}
+                </flux:navlist>
+            @endauth
+
         </flux:sidebar>
 
         <!-- Desktop Header -->
@@ -104,11 +119,11 @@
                                 <flux:menu.item href="/settings/profile" icon="cog" wire:navigate>{{ __('Settings') }}</flux:menu.item>
                             </flux:menu.radio.group>
 
-                            <flux:menu.separator />
+                            {{-- <flux:menu.separator /> --}}
 
                             <form method="POST" action="{{ route('logout') }}" class="w-full">
                                 @csrf
-                                <flux:menu.item as="button" type="submit" icon="arrow-right-start-on-rectangle" class="w-full">
+                                <flux:menu.item as="button" type="submit" icon="arrow-right-start-on-rectangle" class="w-full cursor-pointer">
                                     {{ __('Log Out') }}
                                 </flux:menu.item>
                             </form>
@@ -170,11 +185,11 @@
                             <flux:menu.item href="/settings/profile" icon="cog" wire:navigate>Settings</flux:menu.item>
                         </flux:menu.radio.group>
 
-                        <flux:menu.separator />
+                        {{-- <flux:menu.separator /> --}}
 
                         <form method="POST" action="{{ route('logout') }}" class="w-full">
                             @csrf
-                            <flux:menu.item as="button" type="submit" icon="arrow-right-start-on-rectangle" class="w-full">
+                            <flux:menu.item as="button" type="submit" icon="arrow-right-start-on-rectangle" class="w-full cursor-pointer">
                                 {{ __('Log Out') }}
                             </flux:menu.item>
                         </form>
